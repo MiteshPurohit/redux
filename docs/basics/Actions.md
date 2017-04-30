@@ -2,9 +2,9 @@
 
 First, let's define some actions.
 
-**Actions** are payloads of information that send data from your application to your store. They are the *only* source of information for the store. You send them to the store using [`store.dispatch()`](../api/Store.md#dispatch).
+**Actions** send data from your application to your store. They are the *only* source of information for the store. You send them to the store using [`store.dispatch()`](../api/Store.md#dispatch).
 
-Here's an example action which represents adding a new todo item:
+Here's an example action which adds a new todo item:
 
 ```js
 const ADD_TODO = 'ADD_TODO'
@@ -17,7 +17,7 @@ const ADD_TODO = 'ADD_TODO'
 }
 ```
 
-Actions are plain JavaScript objects. Actions must have a `type` property that indicates the type of action being performed. Types should typically be defined as string constants. Once your app is large enough, you may want to move them into a separate module.
+Actions are plain JavaScript objects. Actions must have a `type` property. Types are usually defined as string constants. Once your app is large enough, you may want to move them into a separate module.
 
 ```js
 import { ADD_TODO, REMOVE_TODO } from '../actionTypes'
